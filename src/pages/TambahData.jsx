@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function AddTodo() {
   const navigate = useNavigate();
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState([]);
   const [selesai, setSelesai] = useState(false);
 
   const handleSubmit = (e) => {
