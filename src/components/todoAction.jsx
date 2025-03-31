@@ -1,5 +1,4 @@
-// eslint-disable-next-line react/prop-types
-function action({ onFilteredTodo }) {
+function Action({ handedatabelumdone, handledatadone, handledatasemua }) {
   return (
     <div className="my-4">
       <h2 className="text-center font-bold text-3xl mb-5">Todo List</h2>
@@ -7,21 +6,21 @@ function action({ onFilteredTodo }) {
         <button
           className=" text-white bg-sky-500 w-full py-2 font-semibold rounded-sm  "
           value={"all"}
-          onClick={(event) => onFilteredTodo(event)}
+          onClick={handledatasemua}
         >
           All
         </button>
         <button
           className=" text-white bg-sky-500 w-full py-2 font-semibold rounded-sm "
           value={"done"}
-          onClick={(event) => onFilteredTodo(event)}
+          onClick={handledatadone}
         >
           Done
         </button>
         <button
           className=" text-white bg-sky-500 w-full font-semibold py-2 rounded-sm "
           value={"active"}
-          onClick={(event) => onFilteredTodo(event)}
+          onClick={handedatabelumdone}
         >
           Todo
         </button>
@@ -30,4 +29,4 @@ function action({ onFilteredTodo }) {
   );
 }
 
-export default action;
+export default Action;
