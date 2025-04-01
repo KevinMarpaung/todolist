@@ -1,3 +1,4 @@
+import Button from "./Elements/Button";
 import SearchTodo from "./pencarian";
 import { useNavigate } from "react-router-dom";
 
@@ -18,12 +19,7 @@ const Header = ({ Search }) => {
               <SearchTodo onSearchTodo={Search} />
             </div>
             <div className="sm:w-1/3 self-end">
-              <button
-                onClick={handleClick}
-                className="inline-block text-center font-semibold rounded-md text-white w-full bg-sky-500 py-2"
-              >
-                Add New Todo
-              </button>
+              <Button onclick={handleClick}>Add New Todo</Button>
             </div>
           </div>
         </div>

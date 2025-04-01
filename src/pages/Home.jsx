@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 const Home = () => {
   const [value, setValue] = useState([]);
   const [filter, setFilter] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const saveData = localStorage.getItem("datablog");
@@ -55,10 +56,15 @@ const Home = () => {
     setValue([]);
     localStorage.setItem("datablog", JSON.stringify([]));
   };
+
+  const handleSearch = (query) => {
+    setSearchQuery(query); // Mengubah state searchQuery dengan kata yang dicari
+  };
+
   return (
     <>
       <Layout>
-        <Header />
+        <Header Search={handleSearch} />
         <Action onfilter={handleFilterChange}></Action>
         <Todo
           handleCheked={handleCheked}
